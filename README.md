@@ -1,1 +1,2 @@
-# Projekt Algorytmy i struktury danych
+# Projekt - Algorytmy i struktury danych
+P05 - 179959
