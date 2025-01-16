@@ -1,0 +1,11 @@
+Podciagi malejace w tablicy [5, 4, 2, 2, 1]: 
+[5, 4], [5, 4, 2], [4, 2], [2, 1]
+Liczba malejacych podciagow: 4
+
+Podciagi malejace w tablicy [2, 5, 3]: 
+[5, 3]
+Liczba malejacych podciagow: 1
+
+Podciagi malejace w tablicy [1, 2, 4, 6, 7]: 
+Liczba malejacych podciagow: 0
+
