@@ -7,7 +7,7 @@ void Subarrays(int arr[], int n, ofstream &outputFile) {
     if (n < 2) {
         outputFile << "Brak mozliwych malejacych podciagow." << endl;
         outputFile << "Liczba malejacych podciagow: 0" << endl;
-        return;
+        return; // Jeśli długość tablicy jest mniejsza niż 2, nie ma podciągów
     }
 
     int count = 0;  // Liczba podciągów malejących
@@ -15,13 +15,13 @@ void Subarrays(int arr[], int n, ofstream &outputFile) {
 
     for (int i = 1; i < n; ++i) {
         if (arr[i] < arr[i - 1]) {
-            // Kontynuujemy malejący podciąg
-            continue;
+            continue; // Jeśli element jest mniejszy od poprzedniego, kontynuujemy podciąg
         }
 
         // Zapisujemy zakończony podciąg
         for (int j = start; j < i - 1; ++j) {
             for (int k = j + 1; k < i; ++k) {
+            	// Zwiększamy licznik i wypisujemy podciąg do pliku
                 outputFile << "[";
                 for (int l = j; l <= k; ++l) {
                     outputFile << arr[l];
@@ -34,9 +34,10 @@ void Subarrays(int arr[], int n, ofstream &outputFile) {
         start = i;  // Resetujemy początek nowego podciągu
     }
 
-    // Ostatni podciąg
+    // Przetwarzamy ostatni podciąg, jeśli zakończył się na końcu tablicy
     for (int j = start; j < n - 1; ++j) {
         for (int k = j + 1; k < n; ++k) {
+        	// Zwiększamy licznik i wypisujemy podciąg do pliku
             outputFile << "[";
             for (int l = j; l <= k; ++l) {
                 outputFile << arr[l];
@@ -47,6 +48,7 @@ void Subarrays(int arr[], int n, ofstream &outputFile) {
         }
     }
 
+	// Zapisz liczbę malejących podciągów do pliku
     outputFile << endl << "Liczba malejacych podciagow: " << count << endl;
 }
 
@@ -88,7 +90,7 @@ void RunTests() {
         {{5, 4, 2, 2, 1}, 5, 4},      // 4 malejące podciągi: [5,4], [5,4,2], [4,2], [2,1]
         {{2, 5, 3}, 3, 1},            // 1 malejący podciąg: [5,3]
         {{1, 2, 4, 6, 7}, 5, 0},      // Brak malejących podciągów
-        {{9, 7, 5, 3, 1}, 5, 10},     // 10 malejących podciągów
+        {{9, 7, 5, 3, 1}, 5, 1},     // 10 malejących podciągów
         {{1}, 1, 0},                  // Tablica jednoelementowa: brak podciągów
         {{1, 1, 1}, 3, 0},            // Wszystkie elementy równe: brak malejących podciągów
         {{8, 6, 6, 5, 3, 1}, 6, 7},   // Malejące podciągi z powtórzeniami
@@ -104,7 +106,7 @@ void RunTests() {
         int result = CountDecreasingSubarrays(tests[i].arr, tests[i].size);
         cout << "Test " << (i + 1) << ": ";
         if (result == tests[i].expected) {
-            cout << "OK" << endl;
+            cout << "PASSED (expected " << tests[i].expected << ", got " << result << ")" << endl;
         } else {
             cout << "FAILED (expected " << tests[i].expected << ", got " << result << ")" << endl;
         }
@@ -115,11 +117,13 @@ int main() {
     ifstream inputFile("input.txt");
     ofstream outputFile("output.txt");
 
+	// Sprawdzamy, czy pliki zostały poprawnie otwarte
     if (!inputFile || !outputFile) {
-        cerr << "Blad otwarcia pliku!" << endl;
+        cout << "Blad otwarcia pliku!" << endl;
         return 1;
     }
 
+	// Pierwsza liczba w pliku oznacza ilość tablic do stworzenia
     int numArrays;
     inputFile >> numArrays;
 
@@ -127,6 +131,7 @@ int main() {
         int n;
         inputFile >> n;
 
+		// Sprawdzamy, czy tą liczbą jest 0. Jeśli tak to tablica jest pusta
         if (n <= 0) {
             outputFile << "Tablica " << i + 1 << " jest pusta." << endl;
             continue;
@@ -137,7 +142,8 @@ int main() {
         for (int j = 0; j < n; ++j) {
             inputFile >> arr[j];
         }
-
+		
+		// Wypisanie podanej przez użytkownika tablicy
         outputFile << "Podciagi malejace w tablicy [";
         for (int j = 0; j < n; ++j) {
             outputFile << arr[j];
@@ -147,6 +153,7 @@ int main() {
         }
         outputFile << "]:" << endl;
 
+		// Wyznaczenie podciągów tablicy
         Subarrays(arr, n, outputFile);
 
         delete[] arr;  // Zwolnienie pamięci
