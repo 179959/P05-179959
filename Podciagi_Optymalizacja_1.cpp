@@ -52,7 +52,6 @@ void Subarrays(int arr[], int n, ofstream &outputFile) {
     outputFile << endl << "Liczba malejacych podciagow: " << count << endl;
 }
 
-
 // Funkcja licząca liczbę malejących podciągów
 int CountDecreasingSubarrays(int arr[], int n) {
     if (n < 2) return 0; // Brak malejących podciągów
@@ -142,7 +141,7 @@ int main() {
         for (int j = 0; j < n; ++j) {
             inputFile >> arr[j];
         }
-		
+
 		// Wypisanie podanej przez użytkownika tablicy
         outputFile << "Podciagi malejace w tablicy [";
         for (int j = 0; j < n; ++j) {
