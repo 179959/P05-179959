@@ -43,13 +43,13 @@ void Subarrays(int arr[], int n, ofstream &outputFile) {
                 outputFile << arr[l];
                 if (l < k) outputFile << ", ";
             }
-            outputFile << "]" << endl;
+            outputFile << "]";
             ++count;
         }
     }
 
     // Zapisz liczbę malejących podciągów do pliku
-    outputFile << "Liczba malejacych podciagow: " << count << endl;
+    outputFile << endl << "Liczba malejacych podciagow: " << count << endl;
 }
 
 int main() {
