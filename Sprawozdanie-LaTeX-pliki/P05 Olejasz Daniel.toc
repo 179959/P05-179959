@@ -1,0 +1,23 @@
+\contentsline {section}{\numberline {1}Treść zadania}{2}{section.1}%
+\contentsline {section}{\numberline {2}Rozwiązywanie problemu}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Podejście pierwsze - stałe tablice}{2}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Opis problemu}{2}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Struktura danych wejściowych i wyjściowych}{2}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Opis działania programu}{3}{subsubsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.4}Schemat blokowy algorytmu}{4}{subsubsection.2.1.4}%
+\contentsline {subsubsection}{\numberline {2.1.5}Pseudokod algorytmu}{5}{subsubsection.2.1.5}%
+\contentsline {subsection}{\numberline {2.2}Drugie podejście - dynamiczne tablice}{6}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Opis problemu - pytanie o usprawnienie programu}{6}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Opis działania omawianej funkcji}{6}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Schemat blokowy funkcji CountDecreasingSubarrays}{7}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}Pseudokod funkcji CountDecreasingSubarrays}{8}{subsubsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.3}Implementacja obu podanych funkcji}{9}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Pierwsza wersja}{9}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Druga wersja}{11}{subsubsection.2.3.2}%
+\contentsline {section}{\numberline {3}Podstawy teoretyczne}{13}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Złożoność czasowa, pamięciowa i obliczeniowa}{13}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Złożoności dla pierwszej wersji programu}{13}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Złożoności dla drugiej wersji programu}{14}{subsubsection.3.1.2}%
+\contentsline {section}{\numberline {4}Szczegóły implementacji}{15}{section.4}%
+\contentsline {section}{\numberline {5}Testowanie}{17}{section.5}%
+\contentsline {section}{\numberline {6}Podsumowanie i wnioski}{17}{section.6}%
